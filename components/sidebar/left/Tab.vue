@@ -6,7 +6,7 @@
     <span class="inline-block w-6 h-6 text-dark">
       <slot name="icon"></slot>
     </span>
-    <span class="ml-4 text-xl" :class="textActive">
+    <span class="ml-4 text-xl hidden xl:block" :class="textActive">
       <slot name="title"></slot>
     </span>
   </nuxt-link>
@@ -14,7 +14,7 @@
 
 <script setup>
 const textActive = computed(() =>
-  props.active ? "font-semibold" : "fontnormal"
+  props.active ? "font-semibold" : "font-normal"
 );
 
 const props = defineProps({

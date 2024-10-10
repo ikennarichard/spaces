@@ -1,12 +1,19 @@
 <script setup>
 const isDarkMode = ref(false);
+const title = "Spaces | Home";
 </script>
 <template>
   <div :class="{ dark: isDarkMode }">
+    <Head>
+      <Title>{{ title }}</Title>
+      <Meta name="description" :content="title" />
+    </Head>
     <main class="min-h-svh dark:bg-gray-950 dark:text-gray-50">
-      <div class="grid grid-cols-12 mx-auto md:px-6 lg:max-w-7xl lg:px-8 lg:gap-5">
+      <div
+        class="grid grid-cols-12 mx-auto md:px-6 lg:max-w-7xl lg:px-8 lg:gap-5"
+      >
         <!-- left sidebar -->
-        <div class="md:block col-span-1 xl:col-span-2">
+        <div class="hidden sm:block col-span-1 xl:col-span-2 border-2">
           <SidebarLeft />
         </div>
       </div>
@@ -15,7 +22,7 @@ const isDarkMode = ref(false);
 </template>
 
 <style>
-  body {
-    font-family: "Inter", sans-serif;
-  }
+body {
+  font-family: "Inter", sans-serif;
+}
 </style>

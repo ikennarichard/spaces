@@ -1,4 +1,5 @@
 <script setup>
+
 const isDarkMode = ref(false);
 const title = "Spaces | Home";
 </script>
@@ -13,9 +14,17 @@ const title = "Spaces | Home";
         class="grid grid-cols-12 mx-auto md:px-6 lg:max-w-7xl lg:px-8 lg:gap-5"
       >
         <!-- left sidebar -->
-        <div class="hidden sm:block col-span-1 xl:col-span-2 border-2">
+        <div class="hidden sm:block col-span-1 xl:col-span-2">
           <SidebarLeft />
         </div>
+        <!-- main content -->
+         <div class="col-span-12 md:col-span-8
+         xl:col-span-6"
+         </div>
+         <!-- right sidebar -->
+          <div class="hidden sm:block md:col-span-3 xl:col-span-3">
+            <SidebarRight />
+          </div>
       </div>
     </main>
   </div>
